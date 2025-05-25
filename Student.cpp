@@ -51,12 +51,17 @@ string Student::getMajor() const {
 }
 
 void Student::display() {
-    cout << "\n学生信息：\n"
-         << "学号：" << id << "\n"
-         << "姓名：" << name << "\n"
-         << "性别：" << gender << "\n"
-         << "身份证号：" << id_Card << "\n"
-         << "电话：" << phone << "\n"
-         << "入学年份：" << enrollYear << "\n"
-         << "专业：" << major << "\n";
-}
+        cout << "\n学生信息：\n"
+             << "学号：" << id << "\n"
+             << "姓名：" << name << "\n"
+             << "性别：" << gender << "\n"
+             << "入学年份：" << enrollYear << "\n"
+             << "专业：" << major << "\n"
+             << "身份证号：" << id_Card << "\n"
+             << "手机号：" << phone << "\n"
+             << "课程学习：\n";
+        cout << "语文：" << (chinese >= 0 ? to_string(chinese) : "未录入") << "\n";
+        cout << "数学：" << (math >= 0 ? to_string(math) : "未录入") << "\n";
+        cout << "英语：" << (english >= 0 ? to_string(english) : "未录入") << "\n";
+        cout << "平均成绩：" << getAverage() << endl;
+    }
